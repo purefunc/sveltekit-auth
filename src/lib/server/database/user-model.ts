@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import db from '$lib/server/database/drizzle';
+import { db } from '$lib/server/database/drizzle';
 import { userTable } from '$lib/server/database/drizzle-schemas';
 import type { User, UpdateUser } from '$lib/server/database/drizzle-schemas';
 
@@ -31,7 +31,9 @@ export const updateUser = async (id: string, user: UpdateUser) => {
 };
 
 export const createUser = async (user: User) => {
+	console.log('user', user);
 	const result = await db.insert(userTable).values(user).onConflictDoNothing().returning();
+	console.log('result', result);
 	if (result.length === 0) {
 		return null;
 	} else {

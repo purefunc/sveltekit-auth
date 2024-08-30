@@ -1,12 +1,12 @@
 {
   "version": "5",
-  "dialect": "pg",
+  "dialect": "sqlite",
   "entries": [
     {
       "idx": 0,
       "version": "5",
-      "when": 1708818642946,
-      "tag": "0000_lyrical_shocker",
+      "when": 1725021312182,
+      "tag": "0000_dear_reptil",
       "breakpoints": true
     }
   ]
