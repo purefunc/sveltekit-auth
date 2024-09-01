@@ -1,6 +1,9 @@
-<script lang="ts">
-	import { User2 } from 'lucide-svelte';
-	export let size: string;
-</script>
-
-<User2 {size} />
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="14" cy="14" r="14" fill="white" />
+	<path
+		fill-rule="evenodd"
+		clip-rule="evenodd"
+		d="M14 28C21.732 28 28 21.732 28 14C28 6.26802 21.732 0 14 0C6.26802 0 0 6.26802 0 14C0 21.732 6.26802 28 14 28ZM14.6365 9C7.47112 11.8903 7.38173 16.0322 14.5917 18.8182C1.35765 17.0259 1.26347 10.2673 14.6365 9ZM12.7404 22.1819C20.7346 17.4197 20.705 10.432 12.6364 5.81819C26.9574 10.0908 26.8869 16.4691 12.7404 22.1819Z"
+		fill="#82A8FF"
+	/>
+</svg>
