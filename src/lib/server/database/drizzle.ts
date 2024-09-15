@@ -1,10 +1,10 @@
-import Database from 'better-sqlite3';
-import * as dotenv from 'dotenv';
 import { drizzle } from 'drizzle-orm/better-sqlite3';
+import { migrate } from 'drizzle-orm/better-sqlite3/migrator';
+import Database from 'better-sqlite3';
 
-dotenv.config();
+const betterSqlite = new Database('./src/lib/server/database/sqlite.db');
+export const db = drizzle(betterSqlite);
 
-const sqlite = new Database(process.env.DB_URL);
-const db = drizzle(sqlite);
+migrate(db, { migrationsFolder: './src/lib/server/database/migrations' });
 
-export { db, sqlite };
+betterSqlite.close();
